@@ -6,6 +6,74 @@
   <title>Calculator App!</title>
 </head>
 <body>
-  <h1>Hey, let's start calculating stuff!</h1>
+  <div class="content">
+    <div class="calculator-wrapper">
+      <div class="calculator calculator-wrapper__calculator">
+        <div class="displayer calculator__displayer">
+          <!-- Content display -->
+        </div>
+
+        <div class="calculator__controls">
+          <div class="calculator__digits">
+            <div class="calc-btn">9</div>
+            <div class="calc-btn">8</div>
+            <div class="calc-btn">7</div>
+            <div class="calc-btn">6</div>
+            <div class="calc-btn">5</div>
+            <div class="calc-btn">4</div>
+            <div class="calc-btn">3</div>
+            <div class="calc-btn">2</div>
+            <div class="calc-btn">1</div>
+            <div class="calc-btn">0</div>
+          </div>
+          
+          <div class="calculator__actions">
+            <div class="calc-btn">C</div>
+            <div class="calc-btn">
+              <svg class="calc-svg-icon calc-svg-icon_light" xmlns="http://www.w3.org/2000/svg"viewBox="0 0 24 24">
+                <path d="M0 12l9-8v6h15v4h-15v6z"/>
+              </svg>
+            </div>
+            <div class="calc-btn">
+              <svg class="calc-svg-icon calc-svg-icon_light" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z"/>
+              </svg>
+            </div>
+            <div class="calc-btn">-</div>
+            <div class="calc-btn">*</div>
+            <div class="calc-btn">/</div>
+            <div class="calc-btn">^x</div>
+            <div class="calc-btn">sqrt(x)</div>
+            <div class="calc-btn">Result</div>
+          </div>
+        </div>
+
+      </div>
+      <div class="calculator-history">
+        <div class="history-record history-record_disabled">Стек операций пуст</div>
+        <div class="history-record calculator-history__record">
+          234243 + 243 + 23 - 234 + 243234 - 23423 = <span class="history-record__result">234423</span>
+        </div>
+        <div class="history-record calculator-history__record">
+          2 + 2 = <span class="history-record__result">234423</span>
+        </div>
+        <div class="history-record calculator-history__record">
+          2 + 2 = <span class="history-record__result">234423</span>
+        </div>
+        <div class="history-record calculator-history__record">
+          2 + 2 = <span class="history-record__result">234423</span>
+        </div>
+        <div class="history-record calculator-history__record">
+          2 + 2 = <span class="history-record__result">234423</span>
+        </div>
+        <div class="history-record calculator-history__record">
+          2 + 2 = <span class="history-record__result">234423</span>
+        </div>
+        <div class="history-record calculator-history__record">
+          2 + 2 = <span class="history-record__result">234423</span>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
