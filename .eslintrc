@@ -1,0 +1,14 @@
+{
+  "parserOptions": {
+    "ecmaVersion": 2019,
+    "sourceType": "module"
+  },
+  "env": {
+    "browser": true 
+  },
+  "extends": ["eslint:recommended", "google", "eslint-config-prettier"],
+  "rules": {
+    "linebreak-style": "off",
+    "no-var": "off"
+  }
+}
