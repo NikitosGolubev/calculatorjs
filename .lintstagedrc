@@ -1,8 +1,8 @@
 {
-  "*.(js|json)": [
+  "*.(js)": [
     "eslint"
   ],
-  "**/*.+(js|json)": [
+  "**/*.+(js)": [
     "prettier --write",
     "git add"
   ]
