@@ -7,6 +7,7 @@
     "browser": true 
   },
   "extends": ["eslint:recommended", "google", "eslint-config-prettier"],
+  "plugins": ["html"],
   "rules": {
     "linebreak-style": "off",
     "no-var": "off"

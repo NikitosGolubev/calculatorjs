@@ -4,11 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "prettier": "prettier --ignore-path .gitignore \"src/**/*.+(js|json)\"",
+    "format": "yarn prettier --write",
+    "check-format": "yarn prettier --list-different",
     "lint": "eslint src/** --ignore-path .gitignore",
-    "format": "prettier --write \"src/**/*.+(js|json)\" --ignore-path .gitignore",
-    "build": "webpack --mode production",
+    "prod": "webpack --mode production",
     "dev": "webpack serve --mode development",
-    "prod": "yarn format && yarn lint && yarn build"
+    "build": "yarn format && yarn lint && yarn build",
+    "validate": "yarn check-format && yarn lint"
   },
   "author": "",
   "license": "ISC",
@@ -19,7 +22,9 @@
     "eslint": "^7.11.0",
     "eslint-config-google": "^0.14.0",
     "eslint-config-prettier": "^6.12.0",
+    "eslint-plugin-html": "^6.1.0",
     "html-webpack-plugin": "^4.5.0",
+    "husky": "^4.3.0",
     "mini-css-extract-plugin": "^1.2.1",
     "path": "^0.12.7",
     "prettier": "^2.1.2",
