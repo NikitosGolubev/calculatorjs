@@ -119,6 +119,8 @@ body {
   align-items: center;
   justify-content: center;
   padding: 8px 10px;
+  box-sizing: border-box;
+  height: 40px;
   cursor: pointer;
   background: $secondary;
   border-radius: $border-radius;

@@ -1,4 +1,4 @@
 import './scss/index.scss';
+import bootstrap from './js/bootstrap';
 
-var n = 'Kek!!';
-console.log(n);
+bootstrap();

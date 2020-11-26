@@ -15,36 +15,67 @@
 
         <div class="calculator__controls">
           <div class="calculator__digits">
-            <div class="calc-btn">9</div>
-            <div class="calc-btn">8</div>
-            <div class="calc-btn">7</div>
-            <div class="calc-btn">6</div>
-            <div class="calc-btn">5</div>
-            <div class="calc-btn">4</div>
-            <div class="calc-btn">3</div>
-            <div class="calc-btn">2</div>
-            <div class="calc-btn">1</div>
-            <div class="calc-btn">0</div>
+            <div class="js-btn calc-btn" data-content="8">8</div>
+            <div class="js-btn calc-btn" data-content="7">7</div>
+            <div class="js-btn calc-btn" data-content="6">6</div>
+            <div class="js-btn calc-btn" data-content="5">5</div>
+            <div class="js-btn calc-btn" data-content="4">4</div>
+            <div class="js-btn calc-btn" data-content="9">9</div>
+            <div class="js-btn calc-btn" data-content="3">3</div>
+            <div class="js-btn calc-btn" data-content="2">2</div>
+            <div class="js-btn calc-btn" data-content="1">1</div>
+            <div class="js-btn calc-btn" data-content="0">0</div>
           </div>
           
           <div class="calculator__actions">
-            <div class="calc-btn">C</div>
-            <div class="calc-btn">
+            <div class="js-btn calc-btn" data-content="clear">C</div>
+            <div class="js-btn calc-btn" data-content="delete">
               <svg class="calc-svg-icon calc-svg-icon_light" xmlns="http://www.w3.org/2000/svg"viewBox="0 0 24 24">
                 <path d="M0 12l9-8v6h15v4h-15v6z"/>
               </svg>
             </div>
-            <div class="calc-btn">
+            <div class="js-btn calc-btn" data-content="add">
               <svg class="calc-svg-icon calc-svg-icon_light" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <path d="M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z"/>
               </svg>
             </div>
-            <div class="calc-btn">-</div>
-            <div class="calc-btn">*</div>
-            <div class="calc-btn">/</div>
-            <div class="calc-btn">^x</div>
-            <div class="calc-btn">sqrt(x)</div>
-            <div class="calc-btn">Result</div>
+            <div class="js-btn calc-btn" data-content="subtract">
+              <svg class="calc-svg-icon calc-svg-icon_light" viewBox="0 -192 469.33333 469" xmlns="http://www.w3.org/2000/svg">
+                <path d="m437.332031.167969h-405.332031c-17.664062 0-32 14.335937-32 32v21.332031c0 17.664062 14.335938 32 32 32h405.332031c17.664063 0 32-14.335938 32-32v-21.332031c0-17.664063-14.335937-32-32-32zm0 0"/>
+              </svg>
+            </div>
+            <div class="js-btn calc-btn" data-content="multiply">
+              <svg class="calc-svg-icon calc-svg-icon_light" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96.336 96.337">
+                <g>
+                  <path d="M92.456,64.241L66.18,48.168l26.275-16.073c0.452-0.277,0.776-0.722,0.9-1.238s0.038-1.06-0.238-1.512l-7.721-12.621
+                    c-0.575-0.942-1.808-1.239-2.75-0.663L57.564,31.405V2c0-1.104-0.896-2-2-2H40.771c-1.104,0-2,0.896-2,2v29.405L13.688,16.062
+                    c-0.944-0.576-2.174-0.28-2.75,0.663L3.217,29.346c-0.276,0.452-0.362,0.996-0.238,1.512s0.448,0.961,0.9,1.238l26.276,16.072
+                    L3.879,64.241c-0.452,0.276-0.776,0.722-0.9,1.237c-0.124,0.517-0.038,1.061,0.238,1.513l7.721,12.62
+                    c0.576,0.942,1.806,1.24,2.75,0.664l25.083-15.344v29.405c0,1.104,0.896,2,2,2h14.793c1.104,0,2-0.896,2-2V64.932l25.083,15.342
+                    c0.942,0.576,2.175,0.279,2.75-0.662l7.721-12.621c0.276-0.452,0.362-0.996,0.238-1.512C93.233,64.962,92.908,64.518,92.456,64.241
+                    z"/>
+                </g>
+              </svg>
+            </div>
+            <div class="js-btn calc-btn" data-content="divide">/</div>
+            <div class="js-btn calc-btn" data-content="degree">^x</div>
+            <div class="js-btn calc-btn" data-content="root">
+              <svg class="calc-svg-icon calc-svg-icon_light" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 143.73 143.73">
+                <g>
+                  <path d="M7.309,74.912h5.946l29.487,41.961c1.384,1.969,3.629,3.105,5.98,3.105c0.463,0,0.933-0.045,1.398-0.137
+                    c2.831-0.553,5.072-2.716,5.722-5.527L73.411,38.37h63.01c4.036,0,7.31-3.271,7.31-7.309c0-4.036-3.272-7.309-7.31-7.309h-68.82
+                    c-3.401,0-6.354,2.349-7.121,5.662l-15.189,65.66L23.032,63.4c-1.367-1.945-3.598-3.105-5.979-3.105H7.309
+                    C3.272,60.295,0,63.566,0,67.604C0.001,71.64,3.273,74.912,7.309,74.912z"/>
+                  <path d="M81.727,105.979c0,3.589,2.926,6.229,6.699,6.229c2.549,0,4.531-1.604,6.229-3.681l10.193-13.401l10.192,13.401
+                    c1.888,2.36,3.868,3.681,6.698,3.681c3.59,0,6.607-2.548,6.607-6.605c0-1.887-0.756-3.586-2.361-5.476l-12.646-14.532
+                    l12.271-14.347c1.134-1.416,1.98-2.926,1.98-4.909c0-3.589-2.926-6.231-6.701-6.231c-2.549,0-4.529,1.605-6.229,3.684
+                    l-9.533,12.455l-9.342-12.455c-1.89-2.361-3.869-3.684-6.699-3.684c-3.588,0-6.606,2.551-6.606,6.609
+                    c0,1.885,0.756,3.586,2.358,5.471l11.797,13.592l-12.93,15.289C82.482,102.486,81.727,103.996,81.727,105.979z"/>
+                </g>
+              </svg>
+            </div>
+            <div class="js-btn calc-btn" data-content="dot">,</div>
+            <div class="js-btn calc-btn" data-content="result">Result</div>
           </div>
         </div>
 
