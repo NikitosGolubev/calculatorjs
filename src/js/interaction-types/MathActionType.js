@@ -19,6 +19,7 @@ const POSSIBLE_VALUES = {
 const MathActionType = {
   ...InteractionType,
   is(value) {
+    if (typeof value === 'object') value = value.getValue();
     return !!POSSIBLE_VALUES[value];
   },
 

@@ -1,5 +1,7 @@
 import DisplayItem from './DisplayItem';
 import NumberItem from './NumberItem';
+import DigitType from '../interaction-types/DigitType';
+import MathActionType from '../interaction-types/MathActionType';
 
 const DisplayGroup = {
   ...DisplayItem,
@@ -18,14 +20,14 @@ const DisplayGroup = {
 
   addItem(item) {
     switch (true) {
-      case item.isDigit:
+      case DigitType.is(item):
         this.addDigit(item);
         break;
-      case item.isMathOperation:
+      case MathActionType.is(item):
         this.addMathOperation(item);
         break;
       default:
-        item.addItem(item);
+        last(this.content).addItem(item);
         break;
     }
   },

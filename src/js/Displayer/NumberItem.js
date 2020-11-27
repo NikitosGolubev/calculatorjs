@@ -1,4 +1,6 @@
 import DisplayItem from './DisplayItem';
+import DigitType from '../interaction-types/DigitType';
+import PunctuationType from '../interaction-types/PunctuationType';
 
 const NumberItem = {
   ...DisplayItem,
@@ -6,10 +8,10 @@ const NumberItem = {
 
   addItem(item) {
     switch (true) {
-      case item.isDigit:
+      case DigitType.is(item):
         this.addDigit(item);
         break;
-      case item.isPunctuation:
+      case PunctuationType.is(item):
         this.addPunctuation(item);
         break;
       default:
@@ -17,9 +19,13 @@ const NumberItem = {
     }
   },
 
-  addDigit() {},
+  addDigit(digit) {
+    this.content += digit.getValue();
+  },
 
-  addPunctuation() {},
+  addPunctuation(punctuation) {
+    if (punctuation.isDot) this.content += '.';
+  },
 };
 
 export default NumberItem;

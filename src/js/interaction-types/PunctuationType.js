@@ -8,6 +8,7 @@ const POSSIBLE_VALUES = {
 const PunctuationType = {
   ...InteractionType,
   is(value) {
+    if (typeof value === 'object') value = value.getValue();
     return !!POSSIBLE_VALUES[value];
   },
 
