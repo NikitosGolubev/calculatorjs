@@ -1,5 +1,5 @@
 import Ui from './Ui';
-import Displayer from './Displayer';
+import Displayer from './Displayer/Displayer';
 import Interaction from './Interaction';
 
 /** Runs application */

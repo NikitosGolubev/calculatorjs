@@ -1,7 +1,7 @@
 import $CONST from './constants';
-import Digit from './interaction-types/Digit';
-import Action from './interaction-types/Action';
-import Punctuation from './interaction-types/Punctuation';
+import DigitType from './interaction-types/DigitType';
+import MathActionType from './interaction-types/MathActionType';
+import PunctuationType from './interaction-types/PunctuationType';
 
 const Interaction = {
   $displayer: null,
@@ -11,18 +11,20 @@ const Interaction = {
   },
 
   create(content) {
-    const InteractionEntity = this.getInteractionTypeByContent(content);
-    console.log(InteractionEntity);
+    const InteractionType = this.getInteractionTypeByContent(content);
+    const entity = InteractionType.makeEntity(content);
+    entity.validate(this.$displayer);
+    this.$displayer.addItem(entity);
   },
 
   getInteractionTypeByContent(content) {
     switch (true) {
-      case Digit.is(content):
-        return Digit;
-      case Action.is(content):
-        return Action;
-      case Punctuation.is(content):
-        return Punctuation;
+      case DigitType.is(content):
+        return DigitType;
+      case MathActionType.is(content):
+        return MathActionType;
+      case PunctuationType.is(content):
+        return PunctuationType;
       default:
         throw new Error($CONST.System.UndefinedInteractionType);
     }
